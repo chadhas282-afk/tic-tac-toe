@@ -38,3 +38,22 @@ h1{
     gap: 8px;
     align-items: center;
 }
+button{
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid black;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+}
+button.primary{
+    background:var(--accent);color:#04211a;border:0;
+    padding:8px 10px;font-weight:600;
+}
+.board{
+    display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:10px;
+      margin-bottom:12px;
+}
