@@ -15,3 +15,26 @@ body{
     color: white;
     padding: 24px;
 }
+.app{
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    border: 2px solid black;
+    padding: 20px;
+    border-radius:12px;
+    box-shadow:0 8px 30px rgba(2,6,23,0.6);
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+h1{
+    font-size: 18px;
+    letter-spacing: 0.6px;
+    color:#dff6ea
+}
+.controls{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
