@@ -1,33 +1,36 @@
-const boardEl = document.getElementById("board")
-const statusEL = document.getElementById("status")
-const turnEl= document.getElementById("turn")
-const resetBtn= document.getElementById("resetBtn")
-const newGameBtn= document.getElementById("newGameBtn")
-const scoreXEl= document.getElementById("scoreX")
-const scoreOEl= document.getElementById("scoreO")
-const scoreTEl= document.getElementById("scoreT")
-let board = Array(9).fill("")
-let current = "X"
-let active = true
-let score = {X: 0, O:0, T:0}
-const wins = [[0,1,2],[3,4,5],[6,7,8],
-      [0,3,6],[1,4,7],[2,5,8],
-      [0,4,8],[2,4,6]]
-function createBoard(){
-    boardEl.innerHTML= ""
-    for(let i=0;i<9;i++){
-        const cell = document.createElement("button")
-        cell.className= "cell"
-        cell.type= "button"
+const boardEl = document.getElementById('board');
+    const statusEl = document.getElementById('status');
+    const turnEl = document.getElementById('turn');
+    const resetBtn = document.getElementById('resetBtn');
+    const newGameBtn = document.getElementById('newGameBtn');
+    const scoreXEl = document.getElementById('scoreX');
+    const scoreOEl = document.getElementById('scoreO');
+    const scoreTEl = document.getElementById('scoreT');
+
+    let board = Array(9).fill('');
+    let current = 'X';
+    let active = true;
+    let scores = { X: 0, O: 0, T: 0 };
+
+    const wins = [
+      d
+    ];
+
+    function createBoard(){
+      boardEl.innerHTML = '';
+      for(let i=0;i<9;i++){
+        const cell = document.createElement('button');
+        cell.className = 'cell';
+        cell.type = 'button';
         cell.setAttribute('data-index', i);
         cell.setAttribute('aria-label', 'cell ' + (i+1));
-        cell.addEventListener("click", onCellClick)
-        cell.addEventListener("keydown", (e) => {
+        cell.addEventListener('click', onCellClick);
+        cell.addEventListener('keydown', (e)=>{
           if((e.key === 'Enter' || e.key === ' ') && !cell.disabled) onCellClick({currentTarget:cell});
         });
         boardEl.appendChild(cell);
+      }
     }
-}
 
     function onCellClick(e){
       if(!active) return;
