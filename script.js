@@ -9,3 +9,5 @@ const scoreTEl= document.getElementById("scoreT")
 let board = Array(9).fill("")
 let current = "X"
 let active = true
+let score = {X: 0, O:0, T:0}
+
