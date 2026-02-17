@@ -17,6 +17,8 @@ function createBoard(){
     boardEl.innerHTML= ""
     for(let i=0;i<9;i++){
         const cell = document.createElement("button")
+        cell.className= "cell"
+        cell.type= "button"
         
     }
 }
