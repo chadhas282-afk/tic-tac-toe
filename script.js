@@ -19,6 +19,8 @@ function createBoard(){
         const cell = document.createElement("button")
         cell.className= "cell"
         cell.type= "button"
+        cell.setAttribute('data-index', i);
+        cell.setAttribute('aria-label', 'cell ' + (i+1));
         
     }
 }
