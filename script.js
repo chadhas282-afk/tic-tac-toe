@@ -64,7 +64,6 @@ function createBoard(){
       active = false;
       const { player, combo } = result;
       statusEl.innerHTML = `Winner: <strong class="highlight">${player}</strong>`;
-      // highlight winning cells
       combo.forEach(i => {
         const cell = boardEl.querySelector(`[data-index="${i}"]`);
         if(cell) cell.style.boxShadow = 'inset 0 0 0 3px rgba(255,255,255,0.04), 0 4px 18px rgba(0,0,0,0.6)';
