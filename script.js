@@ -21,6 +21,10 @@ function createBoard(){
         cell.type= "button"
         cell.setAttribute('data-index', i);
         cell.setAttribute('aria-label', 'cell ' + (i+1));
-        
+        cell.addEventListener("click", onCellClick)
+        cell.addEventListener("keydown"(e) => {
+          if((e.key == "Enter" || e.key ==))
+        }
+        )
     }
 }
