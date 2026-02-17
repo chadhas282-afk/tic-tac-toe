@@ -24,7 +24,6 @@ function createBoard(){
         cell.addEventListener("click", onCellClick)
         cell.addEventListener("keydown"(e) => {
           if((e.key === "Enter" || e.key === " ") && !cell.disabled) onCellClick({currentTarget:cell})
-        }
-        )
+        })
     }
 }
