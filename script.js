@@ -1,6 +1,6 @@
 const boardEl = document.getElementById("board")
 const statusEL = document.getElementById("status")
 const turnEl= document.getElementById("turn")
-const El= document.getElementById("turn")
-const turnEl= document.getElementById("turn")
+const resetBtn= document.getElementById("resetBtn")
+const newGameBtn= document.getElementById("newGameBtn")
 const turnEl= document.getElementById("turn")
