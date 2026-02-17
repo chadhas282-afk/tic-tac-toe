@@ -23,7 +23,7 @@ function createBoard(){
         cell.setAttribute('aria-label', 'cell ' + (i+1));
         cell.addEventListener("click", onCellClick)
         cell.addEventListener("keydown"(e) => {
-          if((e.key == "Enter" || e.key ==))
+          if((e.key === "Enter" || e.key === " ") && !cell.disabled) onCellClick({currentTarget:cell})
         }
         )
     }
