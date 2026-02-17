@@ -22,8 +22,9 @@ function createBoard(){
         cell.setAttribute('data-index', i);
         cell.setAttribute('aria-label', 'cell ' + (i+1));
         cell.addEventListener("click", onCellClick)
-        cell.addEventListener("keydown"(e) => {
-          if((e.key === "Enter" || e.key === " ") && !cell.disabled) onCellClick({currentTarget:cell});
-        })
+        cell.addEventListener("keydown", (e) => {
+          if((e.key === 'Enter' || e.key === ' ') && !cell.disabled) onCellClick({currentTarget:cell});
+        });
+        boardEl.appendChild(cell);
     }
 }
